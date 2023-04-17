@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ddyankov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:52:27 by ddyankov          #+#    #+#             */
-/*   Updated: 2022/11/15 10:17:15 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/04/17 23:00:25 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 

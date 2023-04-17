@@ -3,41 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ddyankov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ddyankov <ddyankov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 15:51:52 by ddyankov          #+#    #+#             */
-/*   Updated: 2022/11/15 10:19:17 by ddyankov         ###   ########.fr       */
+/*   Updated: 2023/04/17 23:09:20 by ddyankov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(const char *str)
+size_t	ft_strlen(const char *s)
 {
-	size_t	a;
+	size_t	i;
 
-	if (str == NULL)
+	if (!s)
 		return (0);
-	a = 0;
-	while (str[a] != '\0')
-		a++;
-	return (a);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 
 char	*ft_strdup(const char *s)
 {
 	char	*news;
-	int		a;
+	int		i;
 
-	a = 0;
+	i = 0;
 	news = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
 	if (!news)
 		return (NULL);
-	while (s[a])
+	while (s[i])
 	{
-		news[a] = s[a];
-		a++;
+		news[i] = s[i];
+		i++;
 	}
-	news[a] = '\0';
+	news[i] = '\0';
 	return (news);
 }
 
@@ -47,9 +48,7 @@ char	*ft_strchr(const char *s, int c)
 
 	a = (char *)s;
 	while (*a != '\0' && *a != (unsigned char)c)
-	{
 		a++;
-	}
 	if (*a == (unsigned char)c)
 		return ((char *)a);
 	else
@@ -81,7 +80,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*subs;
-	size_t	a;
+	size_t	i;
 
 	if (s)
 	{
@@ -93,13 +92,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			subs = (char *)malloc(sizeof(char) * (ft_strlen(s) - start + 1));
 		if (!subs)
 			return (NULL);
-		a = 0;
-		while (a < len && s[start + a] != '\0')
+		i = 0;
+		while (i < len && s[start + i] != '\0')
 		{
-			subs[a] = s[start + a];
-			a++;
+			subs[i] = s[start + i];
+			i++;
 		}
-		subs[a] = '\0';
+		subs[i] = '\0';
 		return (subs);
 	}
 	return (0);
